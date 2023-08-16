@@ -1,0 +1,35 @@
+body{
+    height: 100%;
+    width: 100%;
+    background-image: url('pxfuel.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    color: aliceblue;
+}
+
+#loginpage{
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    height: 400px;
+    width: 600px;
+    top: 25%;
+    left: 30%;
+    padding: 0;
+    position: fixed;
+}
+a:link {
+    color: red;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: green;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+  
