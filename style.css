@@ -5,7 +5,6 @@ html,body{
     overflow-x: hidden;
     position: relative;
     scroll-behavior: smooth;
-    scroll-behavior: smooth;
     z-index: -1;
     
 }
@@ -563,4 +562,33 @@ video{
 	-webkit-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
 	box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+}
+
+#page4 {
+  margin: 0px;
+  padding: 0px;
+}
+#parent{
+  top: 0;
+  padding: 20px;
+  height: 450px;
+  width: 100%;
+}
+.child1{
+  background-color: rgb(181, 169, 169);
+  height:400px ;
+  margin-left: 80px;
+  top: 40px;
+  width: 250px;
+}
+.child1 img{
+  height: 150px;
+  width: 100px;
+  padding-left: 30%;
+  padding-top: 15px;
+  top: 10px;
+}
+.info1{
+  bottom: 0PX;
+  height: 40px;
 }
