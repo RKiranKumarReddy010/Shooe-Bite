@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link href="boxicons/css/boxicons.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet" type="image/x-icon">
@@ -7,222 +8,277 @@
     <link rel="icon" type="image/x-icon" href="user.png">
     <title>Shooe bite | (AUTH0)</title>
 </head>
+
 <body>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
- <div class="wrapper">
-    <nav class="nav">
-        
-        
-        <div class="nav-button">
-            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
-            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
-        </div>
-        <div class="nav-menu-btn">
-            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
-        </div>
-    </nav>
-<!----------------------------- Form box ----------------------------------->    
-    <div class="form-box">
-        
-        <!------------------- login form -------------------------->
-        <div class="login-container" id="login">
-            <div class="top">
-                <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
-                <header class="hid">Login</header>
+    <div class="wrapper">
+        <nav class="nav">
+
+
+            <div class="nav-button">
+                <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+                <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
             </div>
-            <div class="input-box">
-                <input type="text" id="loge" class="input-field" placeholder="Email">
-                <i class="bx bx-user"></i>
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
             </div>
-            <div class="input-box">
-                <input type="password" id="logp" class="input-field" placeholder="Password">
-                <i class="bx bx-lock-alt"></i>
-            </div>
-            <div class="input-box">
-                <input type="submit" onclick="now_login()" class="submit" value="Sign In">
-            </div>
-            <div class="two-col">
-                <div class="one">
-                    <input type="checkbox" id="login-check">
-                    <h6 for="login-check"> Remember Me</h6>
+        </nav>
+        <!----------------------------- Form box ----------------------------------->
+        <div class="form-box">
+
+            <!------------------- login form -------------------------->
+            <div class="login-container" id="login">
+                <div class="top">
+                    <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                    <header class="hid">Login</header>
                 </div>
-                <div class="two">
-                    <h6><a href="#">Forgot password?</a></h6>
-                </div>
-            </div>
-        </div>
-        <!------------------- registration form -------------------------->
-        <form class="register-container" id="register">
-            <div class="top">
-                <span>Have an account? <a href="#" onclick="login()">Login</a></span>
-                <header class="hid">Sign Up</header>
-            </div>
-            <div class="two-forms">
                 <div class="input-box">
-                    <input type="text" id="regfn" class="input-field" placeholder="Firstname">
+                    <input type="text" id="loge" class="input-field" placeholder="Email">
                     <i class="bx bx-user"></i>
                 </div>
                 <div class="input-box">
-                    <input type="text" id="regln" class="input-field" placeholder="Lastname">
-                    <i class="bx bx-user"></i>
+                    <input type="password" id="logp" class="input-field" placeholder="Password">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" onclick="now_login()" class="submit" value="Sign In">
+                </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="login-check">
+                        <h6 for="login-check"> Remember Me</h6>
+                    </div>
+                    <div class="two">
+                        <h6><a href="#">Forgot password?</a></h6>
+                    </div>
                 </div>
             </div>
-            <div class="input-box">
-                <input type="text" id="rege" class="input-field" placeholder="Email">
-                <i class="bx bx-envelope"></i>
-            </div>
-            <div class="input-box">
-                <input type="password" id="regp" class="input-field" placeholder="Password">
-                <i class="bx bx-lock-alt"></i>
-            </div>
-            <div class="input-box">
-                <input type="submit" onclick="regsubmit()" class="submit" value="Register">
-            </div>
-            <div class="two-col">
-                <div class="one">
-                    <input type="checkbox" id="register-check">
-                    <h6 for="register-check"> Remember Me</h6>
+            <!------------------- registration form -------------------------->
+            <form class="register-container" id="register">
+                <div class="top">
+                    <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+                    <header class="hid">Sign Up</header>
                 </div>
-                <div class="two">
-                    <><a href="#">Terms & conditions</a></h6>
+                <div class="two-forms">
+                    <div class="input-box">
+                        <input type="text" id="regfn" class="input-field" placeholder="Firstname">
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="regln" class="input-field" placeholder="Lastname">
+                        <i class="bx bx-user"></i>
+                    </div>
                 </div>
-            </div>
-        </form>
+                <div class="input-box">
+                    <input type="text" id="rege" class="input-field" placeholder="Email">
+                    <i class="bx bx-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="regp" class="input-field" placeholder="Password">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" onclick="regsubmit()" class="submit" value="Register">
+                </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="register-check">
+                        <h6 for="register-check"> Remember Me</h6>
+                    </div>
+                    <div class="two">
+                        <><a href="#">Terms & conditions</a></h6>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-</div>   
-<script>
-  // Import the functions you need from the SDKs you need
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+    <script>
+        // Import the functions you need from the SDKs you need
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyAF5uhn0tK1r2dl7Vx0r3bl8LTEVizJbs8",
-  authDomain: "sb-login-150e8.firebaseapp.com",
-  projectId: "sb-login-150e8",
-  storageBucket: "sb-login-150e8.appspot.com",
-  messagingSenderId: "788778188647",
-  appId: "1:788778188647:web:05bb794d341fc4fd8b79c2",
-  measurementId: "G-69ZS618V6Y"
-};
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAF5uhn0tK1r2dl7Vx0r3bl8LTEVizJbs8",
+            authDomain: "sb-login-150e8.firebaseapp.com",
+            projectId: "sb-login-150e8",
+            storageBucket: "sb-login-150e8.appspot.com",
+            messagingSenderId: "788778188647",
+            appId: "1:788778188647:web:05bb794d341fc4fd8b79c2",
+            measurementId: "G-69ZS618V6Y"
+        };
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
-const database = firebase.database();
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const database = firebase.database();
 
-function regsubmit(){
-    const email = document.getElementById('rege').value;
-    const password = document.getElementById('regp').value;
-    const regnfn = document.getElementById('regfn').value;
-    const regln = document.getElementById('regln').value;
+        function regsubmit() {
+            const email = document.getElementById('rege').value;
+            const password = document.getElementById('regp').value;
+            const regnfn = document.getElementById('regfn').value;
+            const regln = document.getElementById('regln').value;
 
-    if(valemail(email)== false){
-        alert("Enter a  valid email")
-        return
-    }
+            if (valemail(email) == false) {
+                alert("Enter a  valid email")
+                return
+            }
 
-    auth.createUserWithEmailAndPassword(email,password)
-    .then(function(){
-        var user = auth.currentUser
-        var database_ref = database.ref()
-        var user_data = {
-            email: email,
-            first_name: regnfn,
-            last_name: regln,
-            last_login : Date.now()
+            auth.createUserWithEmailAndPassword(email, password)
+                .then(function () {
+                    var user = auth.currentUser
+                    var database_ref = database.ref()
+                    var user_data = {
+                        email: email,
+                        first_name: regnfn,
+                        last_name: regln,
+                        last_login: Date.now()
+                    }
+                    database_ref.child('users/' + user.uid).set(user_data)
+                    let timerInterval
+                    Swal.fire({
+                        title: 'Account Created',
+                        html: 'Redirecting login page in <b></b> milliseconds.',
+                        timer: 2000,
+                        timerProgressBar: true,
+                        didOpen: () => {
+                            Swal.showLoading()
+                            const b = Swal.getHtmlContainer().querySelector('b')
+                            timerInterval = setInterval(() => {
+                                b.textContent = Swal.getTimerLeft()
+                            }, 100)
+                        },
+                        willClose: () => {
+                            clearInterval(timerInterval)
+                        }
+                    }).then((result) => {
+                        /* Read more about handling dismissals below */
+                        if (result.dismiss === Swal.DismissReason.timer) {
+                            console.log('I was closed by the timer')
+                        }
+                    })
+
+
+                })
+                .catch(function (error) {
+                    var error_code = error.code
+                    var error_message = error.message
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Invalid email account !',
+                        footer: '<a href="https://www.w3resource.com/javascript/form/email-validation.php">Why do I have this issue?</a>'
+                    })
+
+
+                })
         }
-        database_ref.child('users/' + user.uid).set(user_data)
-        alert('user created')
 
-    })
-    .catch(function(){
-        var error_code = error.code
-        var error_message = error.message
+        function now_login() {
+            const email = document.getElementById('loge').value;
+            const password = document.getElementById('logp').value;
+            if (valemail(email) == false) {
+                alert("Enter a  valid email")
+                return
+            }
+            auth.signInWithEmailAndPassword(email, password)
+                .then(function () {
 
-    })
-}
+                    var user = auth.currentUser
+                    var database_ref = database.ref()
+                    var user_data = {
+                        last_login: Date.now()
+                    }
+                    database_ref.child('users/' + user.uid).update(user_data)
+                    let timerInterval
+                    Swal.fire({
+                        icon:'success',
+                        title: 'Congratulation! <br> you are logged in!',
+                        html: 'I will close in <b></b> milliseconds.',
+                        timer: 2000,
+                        timerProgressBar: true,
+                        didOpen: () => {
+                            Swal.showLoading()
+                            const b = Swal.getHtmlContainer().querySelector('b')
+                            timerInterval = setInterval(() => {
+                                b.textContent = Swal.getTimerLeft()
+                            }, 100)
+                        },
+                        willClose: () => {
+                            clearInterval(timerInterval)
+                            
+                        }
+                    }).then((result) => {
+                        /* Read more about handling dismissals below */
+                        if (result.dismiss === Swal.DismissReason.timer) {
+                            console.log('I was closed by the timer')
+                            window.location.replace("http://www.w3schools.com");
+                        }
+                    })
+                })
+                .catch(function (error) {
+                    var error_code = error.code
+                    var error_message = error.message
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Something went wrong!',
+                        footer: '<a href="">Why do I have this issue?</a>'
+                    })
+                })
 
-function now_login(){
-    const email = document.getElementById('loge').value;
-    const password = document.getElementById('logp').value;
-    if(valemail(email)== false){
-        alert("Enter a  valid email")
-        return
-    }
-    auth.signInWithEmailAndPassword(email,password)
-    .then(function(){
-
-        var user = auth.currentUser
-        var database_ref = database.ref()
-        var user_data = {
-            last_login : Date.now()
         }
-        database_ref.child('users/' + user.uid).update(user_data)
-        alert('user logged IN!!!')
+        function valemail(email) {
+            exp = /^[^@]+@\w+(\.\w+)+\w$/
+            if (exp.test(email) == true) {
+                return true
+            }
+            else {
+                return false
+            }
+        }
+
+    </script>
+    <script>
+
+        function myMenuFunction() {
+            var i = document.getElementById("navMenu");
+            if (i.className === "nav-menu") {
+                i.className += " responsive";
+            } else {
+                i.className = "nav-menu";
+            }
+        }
 
 
 
-        
-    })
-    .catch(function(error){
-        var error_code = error.code
-        var error_message = error.message
-        alert(error_message)
-    })
-
-}
-
-function valemail(email){
-    exp = /^[^@]+@\w+(\.\w+)+\w$/
-    if(exp.test(email)==true){
-        return true
-    }
-    else{
-        return false
-    }
-}
-
-</script>
-<script>
-
-     function myMenuFunction() {
-    var i = document.getElementById("navMenu");
-    if(i.className === "nav-menu") {
-        i.className += " responsive";
-    } else {
-        i.className = "nav-menu";
-    }
-   }
- 
+        var a = document.getElementById("loginBtn");
+        var b = document.getElementById("registerBtn");
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        function login() {
+            x.style.left = "4px";
+            y.style.right = "-520px";
+            a.className += " white-btn";
+            b.className = "btn";
+            x.style.opacity = 1;
+            y.style.opacity = 0;
+        }
+        function register() {
+            x.style.left = "-510px";
+            y.style.right = "5px";
+            a.className = "btn";
+            b.className += " white-btn";
+            x.style.opacity = 0;
+            y.style.opacity = 1;
+        }
 
 
-    var a = document.getElementById("loginBtn");
-    var b = document.getElementById("registerBtn");
-    var x = document.getElementById("login");
-    var y = document.getElementById("register");
-    function login() {
-        x.style.left = "4px";
-        y.style.right = "-520px";
-        a.className += " white-btn";
-        b.className = "btn";
-        x.style.opacity = 1;
-        y.style.opacity = 0;
-    }
-    function register() {
-        x.style.left = "-510px";
-        y.style.right = "5px";
-        a.className = "btn";
-        b.className += " white-btn";
-        x.style.opacity = 0;
-        y.style.opacity = 1;
-    }
-
-
-</script>
+    </script>
 </body>
+
 </html>
