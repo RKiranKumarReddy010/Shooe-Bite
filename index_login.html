@@ -9,6 +9,7 @@
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
     </head>
     <body  onclick="">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <div id="cursor"></div>
         <div id="cursor-blur"></div>
         <video autoplay muted  id="vid" src="Untitled video - Made with Clipchamp.mp4"></video>
@@ -16,8 +17,10 @@
         <div id="page1">
             <div id="nav1">
                 
-                <div id="nav2" style="align-items: center;">
-                    <div class="c1" style="padding-left:130px;" ><h3>HOME</h3></div>
+                <div id="nav2">
+                    <div class="c1"><h3>HOME</h3></div>
+                    <div class="c1"><h3>SNEAKERS</h3></div>
+                    <div class="c1"><h3>ANIME</h3></div>
                 </div>
                 <!-- sidebar for about option-->
                 <div id="sidebar">
@@ -31,7 +34,7 @@
                     </div>
                 </div>
                 <div id="nav3">
-                    <a href="dummy.html"><button class="but">LOGIN</button></a>
+                    <img src="user.png" class="but" id="usera" onclick="welcome()">
                     <button id="b13" onclick="forward()">A</button>
                 </div>
             </div>
@@ -92,7 +95,7 @@
                     <img src="ii1.jpg">
                 </div>
             </div>
-            <a id="logon" href="dummy.html">
+            <a id="logon" href="dummy.html" target="_blank">
                 <span></span>
                 <span></span>
                 <span></span>

@@ -33,7 +33,7 @@ gsap.from("#vect1",{
 
 document.getElementById("sidebar").style.display = "none";
 
-gsap.from("#im1,#nav2 h3,#nav3 button,#nav3 h3,#nav3 #b12",{
+gsap.from("#im1,#nav2 h3,#nav3 button,#nav3 .but,#nav3 #b12",{
     y:-100,
     duration:1.5,
     delay:4.8,
@@ -139,8 +139,24 @@ function forward() {
         a=a+1;
     }
   }
+var ki = 'ki2003167@gmail.com'
+function welcome(){
+    Swal.fire({
+        title: `Hello <h1>${ki}</h1> Welcome to this site<br> Full your kart with our superb compilation.<br>Hurry up!`,
+        height:600,
+        width: 900,
+        padding: '3em',
+        color: '#716add',
+        background: '#fff url(wallpaperlogin.jpg)',
+        backdrop: `
+          rgba(0,0,123,0.4)
+          url("/images/nyan-cat.gif")
+          left top
+          no-repeat
+        `
+      })
 
-
+}
 
 /*gsap.to("#rtu3,#rtu2,#rtu",{
     opacity:1,
