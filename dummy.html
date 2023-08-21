@@ -180,6 +180,8 @@
 
         function now_login() {
             const email = document.getElementById('loge').value;
+            localStorage.setItem('item',email)
+            console.log(email)
             const password = document.getElementById('logp').value;
             if (valemail(email) == false) {
                 alert("Enter a  valid email")
@@ -216,6 +218,7 @@
                         /* Read more about handling dismissals below */
                         if (result.dismiss === Swal.DismissReason.timer) {
                             console.log('I was closed by the timer')
+                            console.log(email)
                             window.location.replace("index_login.html");
                         }
                     })

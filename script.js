@@ -139,14 +139,16 @@ function forward() {
         a=a+1;
     }
   }
-var ki = 'ki2003167@gmail.com'
+
+
 function welcome(){
+    var value = localStorage.getItem('item')
     Swal.fire({
-        title: `Hello <h1>${ki}</h1> Welcome to this site<br> Full your kart with our superb compilation.<br>Hurry up!`,
+        title: `Hello🤩 <h1><u>${value}</u></h1> Welcome to this site<br> Full your kart with our superb compilation.<br>Hurry up!`,
         height:600,
         width: 900,
         padding: '3em',
-        color: '#716add',
+        color: '#FFFF00',
         background: '#fff url(wallpaperlogin.jpg)',
         backdrop: `
           rgba(0,0,123,0.4)

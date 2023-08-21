@@ -11,10 +11,12 @@ html,body{
 #usera{
   position: relative;
   height: 50px;
+  background-color: transparent;
 }
 #usera:hover{
-  background-color: transparent;
-  height:58px;
+  border-radius: 50%;
+  background-color: black;
+  padding:0;
   transition: 0.5ms;
 }
 #page1{
