@@ -14,6 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <div class="wrapper">
         <nav class="nav">
 
@@ -139,6 +140,17 @@
                         last_login: Date.now()
                     }
                     database_ref.child('users/' + user.uid).set(user_data)
+                    Email.send({
+                                    Host: "smtp.elasticemail.com",
+                                    Username: "ki2003167@gmail.com",
+                                    Password: "D70218302D666AB0843AB976DBC5BBFEB5AC",
+                                    To:email,
+                                    From: "ki2003167@gmail.com",
+                                    Subject: "THANK YOU !",
+                                    Body: `Thank you<br> <h1>${email}</h1><br> for <h1>R=register</h1>. <br>Check it out our website link: https://veeru-paksha.github.io/Shooe-Bite/`
+                                }).then(
+                                    
+                                );
                     let timerInterval
                     Swal.fire({
                         title: 'Account Created',
@@ -155,10 +167,12 @@
                         willClose: () => {
                             clearInterval(timerInterval)
                         }
+                        
                     }).then((result) => {
                         /* Read more about handling dismissals below */
                         if (result.dismiss === Swal.DismissReason.timer) {
                             console.log('I was closed by the timer')
+                            
                         }
                     })
 
@@ -180,7 +194,7 @@
 
         function now_login() {
             const email = document.getElementById('loge').value;
-            localStorage.setItem('item',email)
+            localStorage.setItem('item', email)
             console.log(email)
             const password = document.getElementById('logp').value;
             if (valemail(email) == false) {
@@ -196,9 +210,20 @@
                         last_login: Date.now()
                     }
                     database_ref.child('users/' + user.uid).update(user_data)
+                    Email.send({
+                                    Host: "smtp.elasticemail.com",
+                                    Username: "ki2003167@gmail.com",
+                                    Password: "D70218302D666AB0843AB976DBC5BBFEB5AC",
+                                    To:email,
+                                    From: "ki2003167@gmail.com",
+                                    Subject: "THANK YOU !",
+                                    Body: `Thank you<br> <h1>${email}</h1><br> for login to our website. if any issues then report that issue to us via email. <br>Check it out our website link: https://veeru-paksha.github.io/Shooe-Bite/`
+                                }).then(
+                                    
+                                );
                     let timerInterval
                     Swal.fire({
-                        icon:'success',
+                        icon: 'success',
                         title: 'Congratulation! <br> you are logged in!',
                         html: 'I will close in <b></b> milliseconds.',
                         timer: 2000,
@@ -212,16 +237,16 @@
                         },
                         willClose: () => {
                             clearInterval(timerInterval)
-                            
-                        }
-                    }).then((result) => {
-                        /* Read more about handling dismissals below */
-                        if (result.dismiss === Swal.DismissReason.timer) {
-                            console.log('I was closed by the timer')
-                            console.log(email)
-                            window.location.replace("index_login.html");
+
                         }
                     })
+                        .then((result) => {
+                            /* Read more about handling dismissals below */
+                            if (result.dismiss === Swal.DismissReason.timer) {
+                                
+                                window.location.replace("index_login.html");
+                            }
+                        })
                 })
                 .catch(function (error) {
                     var error_code = error.code
