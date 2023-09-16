@@ -8,6 +8,88 @@ html,body{
     z-index: -1;
     
 }
+.btn {
+  border: none;
+  display: block;
+  border-radius: 7px;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  height: 45px;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #222;
+  padding: 17px 60px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+
+.btn span {
+  position: relative; 
+  z-index: 1;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  width: 140%;
+  background: #78c7d2;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btn:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+.link {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.link a {
+  color: #000;
+  font-size: 25px; 
+}
+
+
+
+
+
+#ererer:hover{
+  background-color:cyan;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: cyan; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(9, 234, 234, 0.848); 
+}
 #usera{
   position: relative;
   height: 50px;
@@ -74,11 +156,7 @@ video{
     text-decoration: underline;
     color: black;
 }
-.c1:hover{
-    color: black;
-    border:cyan;
-    font-size: 20px;
-}
+
 #nav3 h3:hover{
     color: black;
 }
@@ -340,13 +418,15 @@ video{
   }
 
 #text1 #rtu3{
-  font-size:69px;
+  font-size:  80px;
     font-weight: 1000;
     position: relative;
     z-index: 20;
     color: bisque;
 }
-
+#rtu{
+  font-size:85px
+}
 #over{
   top: 0%;
   bottom: 1000px;
@@ -425,29 +505,23 @@ video{
   background-color: white;
   position: relative;
 }
-#page5{
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  position: relative;
-}
+
 #page6{
   height: 25%;
   width: 100%;
-  background-color:rgb(116, 234, 234);
+  background-color:white;
   position: relative;
 }
 
 @font-face {
   font-family: kiran;
-  src: url(./PettingillCF-Bold.ttf);
+  src: url(./SF_Shai_Fontai_Extended.ttf);
 }
 #h11{
   padding: 0;
-  margin-top: -17px;
+  margin-top: -50px;
   font-family: kiran;
-  font-size: 60vh;
+  font-size: 50vh;
   text-transform: uppercase;
   display: inline-block;
   text-overflow: clip;
@@ -455,7 +529,7 @@ video{
   white-space: nowrap;
   font-weight: 950;
   font-stretch: 500%;
-  background-image: url('erere.png');
+  background-image: url('pawel-czerwinski--vcE6c-UP9E-unsplash.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -573,10 +647,159 @@ video{
 	-moz-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
 	box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
 }
+#page5{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+
+  background-color: black;
+  
+}
+
+.section2 .container {
+  padding-left: 175px;
+  width: 60%;
+  position: absolute;
+  height: max-content;
+  left: 155PX;
+  bottom: 8px;
+  padding-top: 50px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.section2 .container .items {
+  
+  margin-left: 25px;
+  height: 350px;
+  width: 300px;
+  background-color: white;
+  border: 2.5px solid rgb(218, 215, 215);
+  border-radius: 12px;
+}
+.section2 .container .items .name {
+  text-align: center;
+  background-color:black;
+  height: 25px;
+  border-radius: 16px;
+  padding-top: 4px;
+  color: white;
+  margin: 0;
+}
+.section2 .container .items .price {
+  float: left;
+  padding-left: 10px;
+  display: block;
+  width: 100%;
+  color: rgb(255, 0, 0);
+  font-weight: 650;
+}
+
+.section2 .container .items .img img {
+  width: 300px;
+  height: 240px;
+  margin: 0;
+  padding: 0;
+  border-radius: 12px;
+  transition-duration: 0.8s;
+}
+.section2 .container .items .img {
+  overflow: hidden;
+  margin: 0;
+}
+.section2 .container .items:hover .img img {
+ 
+  transform: scale(1.4);
+  transition-duration: 0.5s;
+  border-radius: 12px;
+  
+}
+
+#kyayaar{
+  font-family:kara;
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family:branda;
+  src: url("Branda-yolq.ttf");
+}
+
+@keyframes horizontal-shaking {
+  0% { transform: translateX(0) }
+  25% { transform: translateX(5px) }
+  50% { transform: translateX(-5px) }
+  75% { transform: translateX(5px) }
+  100% { transform: translateX(0) }
+ }
+
+
+.ok {
+  
+  color:black;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  left: 41%;
+  text-align: center;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+.ok:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background:cyan;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.ok:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+.tagline{
+  font-size:34px;
+  text-align: center;
+  font-family: uioo;
+}
+
+@font-face {
+  font-family: uioo;
+  src: url('SF_Shai_Fontai_Extended.ttf');
+}
+
+
+
+.price{
+  text-align: center;
+  font-size:21px;
+  font-weight: bolder;
+
+}
+@font-face {
+  font-family:kara ;
+  src: url(PettingillCF-Bold.ttf);
+}
+@font-face {
+  font-family:karare ;
+  src: url(Matteoscary\ Regular.ttf);
+}
+.section .container .items .kharid{
+  font-family: kara;
+  margin-top:10px;
+
+}
+
+
 
 #page4 {
   margin: 0px;
-  padding: 0px;
+ 
 }
 #parent{
   top: 0;
@@ -601,4 +824,27 @@ video{
 .info1{
   bottom: 0PX;
   height: 40px;
+}
+
+.productcls{
+  height: 480px;
+  margin: 30px;
+  width: 330px;
+  position:absolute;
+  background-color: rgb(205, 199, 199);
+  border-radius: 20px;
+}
+.productcls img{
+  height: 300px;
+  width: 300px;
+  margin-bottom: 5PX;
+  margin:15px;
+  border-radius: 25px;
+}
+.productcls h3{
+  margin-top: 7px;
+  margin: 15PX;
+}
+#logon:hover{
+  background-color:cyan;
 }

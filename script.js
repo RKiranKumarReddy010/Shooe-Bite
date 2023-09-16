@@ -1,3 +1,8 @@
+window.addEventListener('scroll', () => {
+    document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+  }, false);
+
+
 function time(){
     var a=0
     setInterval(function(){
@@ -18,7 +23,7 @@ gsap.to("#over",{
     y:-1000,
     duration:2.2,
     delay:4.3,
-    
+    opacity:0
 })
 
 gsap.from("#vect1",{
@@ -30,6 +35,8 @@ gsap.from("#vect1",{
     ease:"bounce"
 
 })
+
+
 
 document.getElementById("sidebar").style.display = "none";
 
@@ -210,7 +217,18 @@ gsap.from("#page2 #h32",{
         end:"top 30%",
     }
 })
+function eos(){
+    gsap.fromto("#abouttt",{
+        opacity: 1,
+        stagger: 0.05,
+        duration: 2,
+        ease: 'power4.out',
+    })
+}
 
+function nevercome(){
+    window.location.replace("dummy.html");
+}
 /*
  gsap.from("#rtu,#rtu3",{
         duration:2,
@@ -219,21 +237,54 @@ gsap.from("#page2 #h32",{
         repeat:-1,
         yoyo:true,
  })*/
-
+gsap.from(".kyayaar",{
+    y:-200,
+    opacity:0,
+    scrollTrigger:{
+        trigger:"#page4",
+        scroller:"body",
+        start:"top 80%",
+        end:"top 30%",
+        scrub:true,
+        marker:true
+    }
+})
 
  gsap.to("#page3 #h11",{
     transform:"translateX(-70%)",
     scrollTrigger:{
         trigger:"#page3 #h11",
-        scroller:"body",
-        start:"top 45%",
+        start:"top 40%",
         end:"top 10%",
         scrub:2,
     },
  })
 
- 
+ gsap.from(".ok,#page4 img",{
+    y:-200,
+    scrollTrigger:{
+        trigger:"#page4",
+        scroller:"body",
+        start:"top 40%",
+        end:"top 10%",
+        duration:1.2,
+        opacity:0,
+        scrub:true,
+    }
+})
 
+gsap.from("#page5 img",{
+    y:-200,
+    scrollTrigger:{
+        trigger:"#page5",
+        scroller:"body",
+        start:"top 40%",
+        end:"top 10%",
+        duration:1.2,
+        opacity:0,
+        scrub:true,
+    }
+})
 
  
 
