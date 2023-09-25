@@ -23,7 +23,6 @@ gsap.to("#over",{
     y:-1000,
     duration:2.2,
     delay:4.3,
-    opacity:0
 })
 
 gsap.from("#vect1",{
