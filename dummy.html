@@ -3,6 +3,7 @@
 
 <head>
     <link href="boxicons/css/boxicons.min.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="dummy.css">
     <link rel="icon" type="image/x-icon" href="user.png">
@@ -14,7 +15,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <div class="wrapper">
         <nav class="nav">
 
@@ -96,6 +98,8 @@
             </form>
         </div>
     </div>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <script>
         // Import the functions you need from the SDKs you need
         // TODO: Add SDKs for Firebase products that you want to use
@@ -142,10 +146,10 @@
                     database_ref.child('users/' + user.uid).set(user_data)
                     Email.send({
                                     Host: "smtp.elasticemail.com",
-                                    Username: "ki2003167@gmail.com",
-                                    Password: "D70218302D666AB0843AB976DBC5BBFEB5AC",
+                                    Username: "shooebiteOfficial@gmail.com",
+                                    Password: "1CACCC157B7B608446D51AC43ADDDE6B684F",
                                     To:email,
-                                    From: "ki2003167@gmail.com",
+                                    From: "shooebite@gmail.com",
                                     Subject: "THANK YOU !",
                                     Body: `Thank you<br> <h1>${email}</h1><br> for <h1>R=register</h1>. <br>Check it out our website link: https://veeru-paksha.github.io/Shooe-Bite/`
                                 }).then(
@@ -212,10 +216,10 @@
                     database_ref.child('users/' + user.uid).update(user_data)
                     Email.send({
                                     Host: "smtp.elasticemail.com",
-                                    Username: "ki2003167@gmail.com",
-                                    Password: "D70218302D666AB0843AB976DBC5BBFEB5AC",
+                                    Username: "shooebiteOfficial@gmail.com",
+                                    Password: "1CACCC157B7B608446D51AC43ADDDE6B684F",
                                     To:email,
-                                    From: "ki2003167@gmail.com",
+                                    From: "shooebite@gmail.com",
                                     Subject: "THANK YOU !",
                                     Body: `Thank you<br> <h1>${email}</h1><br> for login to our website. if any issues then report that issue to us via email. <br>Check it out our website link: https://veeru-paksha.github.io/Shooe-Bite/`
                                 }).then(
@@ -281,9 +285,7 @@
                 i.className = "nav-menu";
             }
         }
-
-
-
+        
         var a = document.getElementById("loginBtn");
         var b = document.getElementById("registerBtn");
         var x = document.getElementById("login");

@@ -1,102 +1,133 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>SHOOE BITE</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/x-icon" href="fgh.png">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
-    </head>
-    <body  onclick="">
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <div id="cursor"></div>
-        <div id="cursor-blur"></div>
-        <video autoplay muted  id="vid" src="Untitled video - Made with Clipchamp.mp4"></video>
-        <img src="web-removebg-preview.png" id="im1" onclick="nav()">
-        <div id="page1">
-            <div id="nav1">
-                
-                <div id="nav2">
-                    <div class="c1"><h3>HOME</h3></div>
-                    <div class="c1"><h3>SNEAKERS</h3></div>
-                    <div class="c1"><h3>ANIME</h3></div>
+
+<head>
+    <title>SHOOE BITE</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="fgh.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+        integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+</head>
+
+<body onclick="">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+    <video autoplay muted id="vid" src="Untitled video - Made with Clipchamp.mp4"></video>
+    <img src="web-removebg-preview.png" id="im1" onclick="nav()">
+    <div id="page1">
+        <div id="nav1">
+
+            <div id="nav2">
+                <div class="c1">
+                    <h3>HOME</h3>
                 </div>
-                <!-- sidebar for about option-->
-                <div id="sidebar">
-                    <button id="b12" onclick="backward()">></button>
-                    
+                <div class="c1">
+                    <h3>SNEAKERS</h3>
+                </div>
+                <div class="c1">
+                    <h3>ANIME</h3>
+                </div>
+            </div>
+            <!-- sidebar for about option-->
+            <div id="sidebar">
+                <button id="b12" onclick="backward()">></button>
+
                 <div id="shutup">
                     <table id="p123">
-                    <tr><h3 class="name11">R.Kiran Kumar Reddy</h3></tr>
-                    <tr><h3 class="name11">Pratyasha nayak</h3></tr>
-                    <tr><h3 class="name11">K.Sweta simran rao</h3></tr>
+                        <tr>
+                            <h3 class="name11">R.Kiran Kumar Reddy</h3>
+                        </tr>
+                        <tr>
+                            <h3 class="name11">Pratyasha nayak</h3>
+                        </tr>
+                        <tr>
+                            <h3 class="name11">K.Sweta simran rao</h3>
+                        </tr>
                     </table>
-                    </div>
-                </div>
-                <div id="nav3">
-                    <img src="user.png" class="but" id="usera" onclick="welcome()">
-                    <img src="logout.png" alt="" id="ererer" style="height:50px ; border-radius:50%" onclick="nevercome()" class="but">
-                    <button id="b13" onclick="forward()">A</button>
                 </div>
             </div>
-            <div id="text1" onclick="drop()">
-                <br><br><br><a id="rt4" onclick="ease()"><h1 id="rtu3">&nbsp&nbsp&nbsp&nbsp&nbsp😀 FIND</h1><h1 id="rtu">WHAT FITS YOU</h1></a>
+            <div id="nav3">
+                <img src="user.png" class="but" id="usera" onclick="welcome()">
+                <img src="logout.png" alt="" id="ererer" style="height:50px ; border-radius:50%" onclick="nevercome()"
+                    class="but">
+                <button id="b13" onclick="forward()">A</button>
             </div>
-            <div>
-                <a href="https://www.flaticon.com/free-icons/down-arrow" id="tear" title="down arrow icons"></a>
-            </div>
-            <div id="bu2">
-                <a id="rat" href="https://www.amazon.com/Nike-Lebron-Basketball-Shoes-Black/dp/B07YMTZ528/ref=sr_1_6?keywords=lebron+17&qid=1691082782&sr=8-6" target="_blank"><button id="bbutton" ><span>BUY NOW</span></button></a>
-                </div>
-            <div id="vect">
-                <a href="#page6"><img src="vector1.png" id="vect1"></a>
-            </div>
-             </div>
-             <!--
+        </div>
+        <div id="text1" onclick="drop()">
+            <br><br><br><a id="rt4" onclick="ease()">
+                <h1 id="rtu3">&nbsp&nbsp&nbsp&nbsp&nbsp😀 FIND</h1>
+                <h1 id="rtu">WHAT FITS YOU</h1>
+            </a>
+        </div>
+        <div>
+            <a href="https://www.flaticon.com/free-icons/down-arrow" id="tear" title="down arrow icons"></a>
+        </div>
+        <div id="bu2">
+            <a id="rat"
+                href="https://www.amazon.com/Nike-Lebron-Basketball-Shoes-Black/dp/B07YMTZ528/ref=sr_1_6?keywords=lebron+17&qid=1691082782&sr=8-6"
+                target="_blank"><button id="bbutton"><span>BUY NOW</span></button></a>
+        </div>
+        <div id="vect">
+            <a href="#page6"><img src="vector1.png" id="vect1"></a>
+        </div>
+    </div>
+    <!--
                  <div id="over">
                 <h1 id="over1">100%</h1>
             </div>
              -->
-            
-        </div>
-        <div id="page2">
+
+    </div>
+    <div id="page2">
         <div id="page3"><!--
             <h3 id="h31"><u>ABOUT THIS SITE</u></h3>
             <h3 id="h32"> &nbsp&nbsp&nbsp&nbspThis site used to promote sneakes in a compilated form, that people can match their fashion with our latest brand posts. This site only used as a medium of affiliate marketing where we post or promote several deals to the audience. That is 3 dimension beneficial i.e many copanies like amazon, nike,ajio like website can grab audience, It is beneficial for us as a third-party seller.</h3>
             -->
-            
+
             <div id="container">
                 <!-- Each image is 350px by 233px -->
                 <div class="photobanner">
-            
+
                     <img class="first" src="ii7.jpg">
                     <img src="ii6.jpg">
-            
+
                     <img src="ii5.jpg">
-            
+
                     <img src="ii4.jpg">
-            
+
                     <img src="ii3.jpg">
-            
+
                     <img src="ii2.jpg">
-            
+
                     <img src="ii1.jpg">
                     <img src="ii6.jpg">
-            
+
                     <img src="ii5.jpg">
-            
+
                     <img src="ii4.jpg">
-            
+
                     <img src="ii3.jpg">
-            
+
                     <img src="ii2.jpg">
-            
+
                     <img src="ii1.jpg">
                     <img src="ii3.jpg">
-            
+
                     <img src="ii2.jpg">
-            
+
                     <img src="ii1.jpg">
                 </div>
             </div>
@@ -107,83 +138,210 @@
                 <span></span>
                 ABOUT US
             </a>
-   <h6 id="h11">WAKE UP TO REALITY. NOTHING EVER GOES AS PLANNED .</h6>
+            <h6 id="h11">WAKE UP TO REALITY. NOTHING EVER GOES AS PLANNED .</h6>
         </div>
         <div id="page4">
             <h1 id="kyayaar" class="ok" style="margin: 0px; font-size:65PX;text-align: center;">SNEAKERS</h1>
-            <h2 class="tagline" >The silent champions of style and comfort, paving the way for every step of your journey.<br> They're the canvas of self-expression that let you step into your own unique style with every stride.<br>where comfort meets style, and every step tells a story.</h2>
+            <h2 class="tagline">The silent champions of style and comfort, paving the way for every step of your
+                journey.<br> They're the canvas of self-expression that let you step into your own unique style with
+                every stride.<br>where comfort meets style, and every step tells a story.</h2>
             <div class="section2">
                 <div class="container">
                     <div class="items">
-                        <div class="img img2"><img  src="https://m.media-amazon.com/images/I/61evn1vGJxL._AC_UL400_.jpg" alt=""></div>
+                        <div class="img img2"><img src="https://m.media-amazon.com/images/I/61evn1vGJxL._AC_UL400_.jpg"
+                                alt=""></div>
                         <div class="name">Red Tape</div>
                         <div class="price" style=""> ₹1,739</div>
                         <button class="btn"><span>Buy Now</span></button>
-                    </div>  
+                    </div>
                     <div class="items">
-                        <div class="img img2"><img src="https://m.media-amazon.com/images/I/71r2cxMMfrL._UX625_.jpg" alt=""></div>
+                        <div class="img img2"><img src="https://m.media-amazon.com/images/I/71r2cxMMfrL._UX625_.jpg"
+                                alt=""></div>
                         <div class="name">Nike Mens Jordan 1 Retro</div>
                         <div class="price" style=""> ₹11,194</div>
                         <button class="btn"><span>Buy Now</span></button>
                     </div>
                     <div class="items">
-                        <div class="img img2"><img src="https://m.media-amazon.com/images/I/71s2UpXJyWL._AC_UL400_.jpg" alt=""></div>
+                        <div class="img img2"><img src="https://m.media-amazon.com/images/I/71s2UpXJyWL._AC_UL400_.jpg"
+                                alt=""></div>
                         <div class="name">Bacca Bucci</div>
                         <div class="price" style=""> ₹1,499</div>
                         <button class="btn"><span>Buy Now</span></button>
                     </div>
                     <div class="items">
-                        <div class="img img2"><img src="https://m.media-amazon.com/images/I/714CqtUUzdL._AC_UL400_.jpg" alt=""></div>
+                        <div class="img img2"><img src="https://m.media-amazon.com/images/I/714CqtUUzdL._AC_UL400_.jpg"
+                                alt=""></div>
                         <div class="name">Puma X-ray 2</div>
                         <div class="price" style=""> ₹2,799</div>
                         <button class="btn"><span>Buy Now</span></button>
                     </div>
-                   
+
                 </div>
-                </div>
+            </div>
         </div>
         <div id="page5">
-            <h1 id="kyayaar" class="ok" style="margin: 0px; font-size:65PX;text-align: center;color:antiquewhite;">ANIME - COS</h1>
-            <h2 class="tagline" style="color: aliceblue;" >The silent champions of style and comfort, paving the way for every step of your journey.<br> They're the canvas of self-expression that let you step into your own unique style with every stride.<br>where comfort meets style, and every step tells a story.</h2>
+            <h1 id="kyayaar" class="ok" style="margin: 0px; font-size:65PX;text-align: center;color:antiquewhite;">ANIME
+                - COS</h1>
+            <h2 class="tagline" style="color: aliceblue;">The silent champions of style and comfort, paving the way for
+                every step of your journey.<br> They're the canvas of self-expression that let you step into your own
+                unique style with every stride.<br>where comfort meets style, and every step tells a story.</h2>
             <div class="section2" style="position:relative; top: 490px;;">
                 <div class="container">
                     <div class="items">
-                        <div class="img img2"><img  src="https://m.media-amazon.com/images/I/61xqh-BNEHL._AC_UL600_FMwebp_QL65_.jpg" alt=""></div>
+                        <div class="img img2"><img
+                                src="https://m.media-amazon.com/images/I/61xqh-BNEHL._AC_UL600_FMwebp_QL65_.jpg" alt="">
+                        </div>
                         <div class="name">Akatsuki shoes</div>
                         <div class="price" style=""> ₹2,299</div>
                         <button class="btn"><span>Buy Now</span></button>
-                    </div>  
+                    </div>
                     <div class="items">
-                        <div class="img img2"><img src="https://m.media-amazon.com/images/I/61rMrRM9uOL._AC_UL600_FMwebp_QL65_.jpg" alt=""></div>
+                        <div class="img img2"><img
+                                src="https://m.media-amazon.com/images/I/61rMrRM9uOL._AC_UL600_FMwebp_QL65_.jpg" alt="">
+                        </div>
                         <div class="name">Luffy 5th gear</div>
                         <div class="price" style=""> ₹2,299</div>
                         <button class="btn"><span>Buy Now</span></button>
                     </div>
                     <div class="items">
-                        <div class="img img2" style="width: 400px;"><img src="https://m.media-amazon.com/images/I/516k2NC5tEL._AC_UL600_FMwebp_QL65_.jpg" alt=""></div>
+                        <div class="img img2" style="width: 400px;"><img
+                                src="https://m.media-amazon.com/images/I/516k2NC5tEL._AC_UL600_FMwebp_QL65_.jpg" alt="">
+                        </div>
                         <div class="name">Naruto -signature</div>
                         <div class="price" style=""> ₹2,356</div>
                         <button class="btn"><span>Buy Now</span></button>
                     </div>
                     <div class="items">
-                        <div class="img img2"><img src="https://m.media-amazon.com/images/I/71yxDCmBcoL._AC_UL600_FMwebp_QL65_.jpg" alt=""></div>
+                        <div class="img img2"><img
+                                src="https://m.media-amazon.com/images/I/71yxDCmBcoL._AC_UL600_FMwebp_QL65_.jpg" alt="">
+                        </div>
                         <div class="name">Men's dragon-3</div>
                         <div class="price" style=""> ₹2,799</div>
                         <button class="btn"><span>Buy Now</span></button>
                     </div>
-                    
+
                 </div>
-                </div>
+            </div>
 
         </div>
         <div id="page6">
+            <div class="footer">
+                <span class="header">Contact Me</span>
+                <div class="left">
+                    <textarea placeholder="Name" id="name1"></textarea>
+                    <textarea placeholder="Email/Contact" id="email1"></textarea>
+                </div>
+                <div class="right">
+                    <textarea placeholder="Message" id="msg1"></textarea>
+                    <button id="submitbtn" onclick="submitForm()">S<br>U<br>B<br>M<br>I<br>T</button>
+                </div>
+                <hr>
+                <div class="bottom110">
+                    <div style="margin:auto;display:flex;gap:20px">
+                        <div class="ftrlinks" id="start">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512">
+                                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                            </svg>
+                        </div>
+                        <div class="ftrlinks">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                            </svg>
+                        </div>
+                        <div class="ftrlinks">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
+                                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <h3 style="text-align:center;color:white;margin:auto">MADE BY: R KIRAN KUMAR REDDY</h3>
+            </div>
+        </div>
 
-        </div>
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js" integrity="sha512-+LXqbM6YLduaaxq6kNcjMsQgZQUTdZp7FTaArWYFt1nxyFKlQSMdIF/WQ/VgsReERwRD8w/9H9cahFx25UDd+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="script.js"></script>
-        
-    </body>
+    </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js"
+        integrity="sha512-+LXqbM6YLduaaxq6kNcjMsQgZQUTdZp7FTaArWYFt1nxyFKlQSMdIF/WQ/VgsReERwRD8w/9H9cahFx25UDd+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+        integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="smtp.js"></script>
+    <script src="script.js"></script>
+    <script>
+        //firebase contact ................
+        // Import the functions you need from the SDKs you need
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyCKg5DclgFcM3n1w9H0hRBZCljNuyskofM",
+            authDomain: "shooe-bite.firebaseapp.com",
+            databaseURL: "https://shooe-bite-default-rtdb.firebaseio.com",
+            projectId: "shooe-bite",
+            storageBucket: "shooe-bite.appspot.com",
+            messagingSenderId: "925865307458",
+            appId: "1:925865307458:web:ef29f587830cc2dfb1ecdb",
+            measurementId: "G-3HTRKCCVNR"
+        };
+
+        // Initialize Firebase
+        // Initialize Firebase
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Reference to the Firebase database
+        const database = firebase.database();
+
+        function submitForm() {
+            const name = document.getElementById("name1").value;
+            const email = document.getElementById("email1").value;
+            const comment = document.getElementById("msg1").value;
+
+            // Get a reference to the database
+            var database = firebase.database();
+
+
+            // Push data to Firebase
+            database.ref("comments").push({
+                name: name,
+                email: email,
+                comment: comment
+            });
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "shooebiteOfficial@gmail.com",
+                Password: "1CACCC157B7B608446D51AC43ADDDE6B684F",
+                To: "ki2003167@gmail.com",
+                From: "shooebite@gmail.com",
+                Subject: "ALERT (⚠️)",
+                Body: `<h3>REVIEW</h3><br><h4>name:${name}<br>${email}</h4><br><h4>${comment}</h4>`
+            }).then(
+
+            );
+            Swal.fire({
+                title: "Thank You!",
+                text: "Your review / complaint have been submitted!",
+                icon: "success"
+              });
+            // Clear the form after submission
+            document.getElementById("commentForm").reset();
+        }
+    </script>
+</body>
+
 </html>

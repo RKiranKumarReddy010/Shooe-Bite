@@ -1,0 +1,75 @@
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.fire {
+    height: 750px;
+    width: 750px;
+    border-radius: 50%;
+    position: fixed;
+    top: 20px;
+    transition: 1s;
+}
+#uid{
+    display :flex;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#fire1 {
+    background-color: red;
+    left: 110px;
+    z-index: 2;
+}
+
+#fire2 {
+    background-color: green;
+    left:510px;
+    z-index: 1;
+}
+
+#fire3 {
+    background-color: blue;
+    left:910px ;
+    z-index: -1;
+}
+#fire1:hover{
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    border-radius:0 ;
+}
+#fire2:hover{
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    border-radius:0 ;
+}
+#fire3:hover{
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    border-radius:0 ;
+}
+#fire1:hover #fire2{
+    z-index: 1;
+}
+#fire1:hover #fire3{
+    z-index: -1;
+}
+#fire2:hover #fire1{
+    z-index: 1;
+}
+#fire2:hover #fire3{
+    z-index: -1;
+}
+#fire3:hover #fire2{
+    z-index: 1;
+}
+#fire3:hover #fire1{
+    z-index: -1;
+}
+

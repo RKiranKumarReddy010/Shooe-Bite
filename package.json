@@ -9,6 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "firebase": "^10.2.0"
-  }
+    "firebase": "^10.2.0",
+    "nodemailer": "^6.9.7"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "keywords": []
 }

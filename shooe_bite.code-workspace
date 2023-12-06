@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "shooe_bite",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5502
+	}
+}

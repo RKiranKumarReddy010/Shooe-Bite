@@ -669,6 +669,9 @@ video{
   background-color: black;
   
 }
+.uu{
+  height: 45px;
+}
 
 .section2 .container {
   padding-left: 175px;
@@ -862,3 +865,185 @@ video{
 #logon:hover{
   background-color:cyan;
 }
+
+
+
+
+:root {
+  --lightblk: #252930;
+  --blk: #111417;
+}
+
+.header {
+  font-size: 57px;
+  color: white;
+  font-family: Rubik Mono One;
+  flex-basis: 100%;
+}
+
+
+.footer {
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 2em;
+  gap: 10px;
+  display: flex;
+  bottom: 0;
+  position: relative;
+  width: 100%;
+  background-color: var(--blk);
+}
+
+div.right {
+  margin: 0;
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+  gap: 10px;
+  flex: 1;
+}
+
+div.left {
+  flex-basis: 100%;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  width: 50%;
+  flex-direction: column;
+  flex: 1;
+}
+
+textarea {
+  font-family: Azeret Mono;
+  box-sizing: border-box;
+  color: whitesmoke;
+  outline: none;
+  resize: none;
+  border: none;
+  padding: 1em;
+  border-radius: 10px;
+  background-color: var(--lightblk);
+}
+
+#msg1 {
+  flex-basis: 100%;
+}
+
+div.bottom110 {
+  min-width: 0;
+  overflow-x: scroll;
+  padding-top: 1em;
+  gap: 2em;
+  color: grey;
+  width: 100%;
+  flex-basis: 100%;
+  display: flex;
+}
+
+.ftrtxt {
+  flex-basis: 100%;
+  font-size: 15px;
+  text-align: center;
+  font-family: Rubik Mono One;
+  color: grey;
+}
+
+.ftrhead {
+  font-size: 35px;
+}
+
+.ftrhead::after,
+.ftrtxt::after {
+  content: "\a";
+  white-space: pre;
+}
+
+.ftrlinks {
+  flex-basis: 1;
+}
+
+hr {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  flex-basis: 100%;
+  color: white;
+}
+
+svg {
+  fill: white;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+svg:hover {
+  transform: scale(1.1);
+  fill: grey;
+}
+
+::placeholder {
+  font-family: Azeret Mono;
+}
+
+#start {
+  margin-left: auto;
+}
+
+#end {
+  margin-right: auto;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+  height: 5px;
+  width: 2px;
+}
+
+#submitbtn {
+  display: none;
+  border-radius: 10px;
+  border: none;
+  font-family: Rubik Mono One;
+  font-size: 15px;
+  transition: 0.5s;
+}
+
+#submitbtn:hover {
+  background-color: var(--lightblk);
+  color: white;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    height: 0%;
+    border-radius: 10px;
+  }
+  100% {
+    opacity: 1;
+    height: 100%;
+    border-radius: 10px;
+  }
+}
+#name1{
+  font-size:20px;;
+}
+#email1{
+  font-size:20px;
+}
+#msg1{
+  font-size:20px;
+}
+
+

@@ -1,37 +1,37 @@
 window.addEventListener('scroll', () => {
-    document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-  }, false);
+    document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+}, false);
 
 
-function time(){
-    var a=0
-    setInterval(function(){
-        a = a+Math.floor(Math.random()*10)
-        if(a<100){
-            document.querySelector("#over1").innerHTML = a +"%"
+function time() {
+    var a = 0
+    setInterval(function () {
+        a = a + Math.floor(Math.random() * 10)
+        if (a < 100) {
+            document.querySelector("#over1").innerHTML = a + "%"
         }
-        if(a>100){
-            a=100
-            document.querySelector("#over1").innerHTML = a+"%"
+        if (a > 100) {
+            a = 100
+            document.querySelector("#over1").innerHTML = a + "%"
         }
-    },150)
+    }, 150)
 
 }
 time()
 
-gsap.to("#over",{
-    y:-1000,
-    duration:2.2,
-    delay:4.3,
+gsap.to("#over", {
+    y: -1000,
+    duration: 2.2,
+    delay: 4.3,
 })
 
-gsap.from("#vect1",{
-    rotation:360,
-    opacity:0,
-    duration:2,
-    delay:7.3,
-    y:-600,
-    ease:"bounce"
+gsap.from("#vect1", {
+    rotation: 360,
+    opacity: 0,
+    duration: 2,
+    delay: 7.3,
+    y: -600,
+    ease: "bounce"
 
 })
 
@@ -39,12 +39,12 @@ gsap.from("#vect1",{
 
 document.getElementById("sidebar").style.display = "none";
 
-gsap.from("#im1,#nav2 h3,#nav3 button,#nav3 .but,#nav3 #b12",{
-    y:-100,
-    duration:1.5,
-    delay:4.8,
-    opacity:0,
-    stagger:0.5
+gsap.from("#im1,#nav2 h3,#nav3 button,#nav3 .but,#nav3 #b12", {
+    y: -100,
+    duration: 1.5,
+    delay: 4.8,
+    opacity: 0,
+    stagger: 0.5
 })
 /*gsap.to("#im1",{
     x:650,
@@ -57,17 +57,17 @@ gsap.from("#im1,#nav2 h3,#nav3 button,#nav3 .but,#nav3 #b12",{
     repeat:1,
     yoyo:true,
 })*/
-function nav(){
-gsap.to("#im1",{
-    x:650,
-    y:300,
-    duration:2,
-    rotation:360,
-    autoSleep:30,
-    scale:2.5,
-    repeat:1,
-    yoyo:true
-})
+function nav() {
+    gsap.to("#im1", {
+        x: 650,
+        y: 300,
+        duration: 2,
+        rotation: 360,
+        autoSleep: 30,
+        scale: 2.5,
+        repeat: 1,
+        yoyo: true
+    })
 }
 /*var cur = document.querySelector("#cursor")
 var blurr = document.querySelector("#cursor-blur")
@@ -76,28 +76,28 @@ document.addEventListener("mousemove",function(dets){
     blurr.style.top = dets.y- 150 +"px"
 })*/
 
-gsap.from("#text1 #rtu3",{
-    opacity:0,
-    x:300,
-    delay:7,
-    duration:2,
-    stagger:0.75
+gsap.from("#text1 #rtu3", {
+    opacity: 0,
+    x: 300,
+    delay: 7,
+    duration: 2,
+    stagger: 0.75
 },)
-gsap.from("#text1 #rtu",{
-    opacity:0,
-    x:-300,
-    delay:7.05,
-    duration:2,
-    stagger:0.75
+gsap.from("#text1 #rtu", {
+    opacity: 0,
+    x: -300,
+    delay: 7.05,
+    duration: 2,
+    stagger: 0.75
 },)
 
-gsap.from("#rat",{
-    opacity:0,
-    x:450,
-    y:900,
-    delay:7.2,
-    duration:3.4,
-    stagger:0.75
+gsap.from("#rat", {
+    opacity: 0,
+    x: 450,
+    y: 900,
+    delay: 7.2,
+    duration: 3.4,
+    stagger: 0.75
 },)
 
 /*function drop(){
@@ -123,35 +123,35 @@ function forward() {
     document.getElementById("sidebar").style.width = "100%";
     document.getElementById("sidebar").style.display = "block";
     document.getElementById("sidebar").style.translate = "0.5s";
-    
-  }
-  
-  function backward() {
+
+}
+
+function backward() {
     document.getElementById("sidebar").style.display = "none";
     document.getElementById("sidebar").style.translate = "0.5s";
-  }
-   var a=3;
-  function but31(){
-    if(a%2==0){
+}
+var a = 3;
+function but31() {
+    if (a % 2 == 0) {
         document.getElementById("h31").style.color = "cyan";
         document.getElementById("h32").style.color = "white";
         document.getElementById("b1029").style.backgroundColor = "cyan";
-        a=a-1;
+        a = a - 1;
     }
-    else{
+    else {
         document.getElementById("h31").style.color = "white";
         document.getElementById("h32").style.color = "cyan";
         document.getElementById("b1029").style.backgroundColor = "white";
-        a=a+1;
+        a = a + 1;
     }
-  }
+}
 
 
-function welcome(){
+function welcome() {
     var value = localStorage.getItem('item')
     Swal.fire({
         title: `Hello🤩 <h1><u>${value}</u></h1> Welcome to this site<br> Full your kart with our superb compilation.<br>Hurry up!`,
-        height:600,
+        height: 600,
         width: 900,
         padding: '3em',
         color: '#FFFF00',
@@ -162,7 +162,7 @@ function welcome(){
           left top
           no-repeat
         `
-      })
+    })
 
 }
 
@@ -191,33 +191,33 @@ gsap.from("#vect1",{
     delay:7.2
 })*/
 
-gsap.from("#page2 #h31",{
-    x:900,
-    duration:6,
-    opacity:0,
-    scrollTrigger:{
-        trigger:"#page2 #h31",
-        scroller:"body",
-        scrub:true,
-        start:"top 60%",
-        end:"top 20%",
+gsap.from("#page2 #h31", {
+    x: 900,
+    duration: 6,
+    opacity: 0,
+    scrollTrigger: {
+        trigger: "#page2 #h31",
+        scroller: "body",
+        scrub: true,
+        start: "top 60%",
+        end: "top 20%",
     }
 })
 
-gsap.from("#page2 #h32",{
-    x:-900,
-    duration:6,
-    opacity:0,
-    scrollTrigger:{
-        trigger:"#page2 #h32",
-        scroller:"body",
-        scrub:true,
-        start:"top 80%",
-        end:"top 30%",
+gsap.from("#page2 #h32", {
+    x: -900,
+    duration: 6,
+    opacity: 0,
+    scrollTrigger: {
+        trigger: "#page2 #h32",
+        scroller: "body",
+        scrub: true,
+        start: "top 80%",
+        end: "top 30%",
     }
 })
-function eos(){
-    gsap.fromto("#abouttt",{
+function eos() {
+    gsap.fromto("#abouttt", {
         opacity: 1,
         stagger: 0.05,
         duration: 2,
@@ -225,7 +225,7 @@ function eos(){
     })
 }
 
-function nevercome(){
+function nevercome() {
     window.location.replace("dummy.html");
 }
 /*
@@ -236,55 +236,67 @@ function nevercome(){
         repeat:-1,
         yoyo:true,
  })*/
-gsap.from(".kyayaar",{
-    y:-200,
-    opacity:0,
-    scrollTrigger:{
-        trigger:"#page4",
-        scroller:"body",
-        start:"top 80%",
-        end:"top 30%",
-        scrub:true,
-        marker:true
+gsap.from(".kyayaar", {
+    y: -200,
+    opacity: 0,
+    scrollTrigger: {
+        trigger: "#page4",
+        scroller: "body",
+        start: "top 80%",
+        end: "top 30%",
+        scrub: true,
+        marker: true
     }
 })
 
- gsap.to("#page3 #h11",{
-    transform:"translateX(-70%)",
-    scrollTrigger:{
-        trigger:"#page3 #h11",
-        start:"top 40%",
-        end:"top 10%",
-        scrub:2,
+gsap.to("#page3 #h11", {
+    transform: "translateX(-70%)",
+    scrollTrigger: {
+        trigger: "#page3 #h11",
+        start: "top 40%",
+        end: "top 10%",
+        scrub: 2,
     },
- })
+})
 
- gsap.from(".ok,#page4 img",{
-    y:-200,
-    scrollTrigger:{
-        trigger:"#page4",
-        scroller:"body",
-        start:"top 40%",
-        end:"top 10%",
-        duration:1.2,
-        opacity:0,
-        scrub:true,
+gsap.from(".ok,#page4 img", {
+    y: -200,
+    scrollTrigger: {
+        trigger: "#page4",
+        scroller: "body",
+        start: "top 40%",
+        end: "top 10%",
+        duration: 1.2,
+        opacity: 0,
+        scrub: true,
     }
 })
 
-gsap.from("#page5 img",{
-    y:-200,
-    scrollTrigger:{
-        trigger:"#page5",
-        scroller:"body",
-        start:"top 40%",
-        end:"top 10%",
-        duration:1.2,
-        opacity:0,
-        scrub:true,
+gsap.from("#page5 img", {
+    y: -200,
+    scrollTrigger: {
+        trigger: "#page5",
+        scroller: "body",
+        start: "top 40%",
+        end: "top 10%",
+        duration: 1.2,
+        opacity: 0,
+        scrub: true,
     }
 })
 
+
+
+
+const msg = document.querySelector("#msg1");
+const sumbitbtn = document.getElementById("submitbtn");
+
+msg.addEventListener("focus", submsg);
+
+function submsg() {
+    sumbitbtn.style.display = "block";
+    sumbitbtn.style.animation = "slide 0.5s ease-in-out";
+}
 
 
 
